@@ -1,0 +1,35 @@
+name:                gol-hs
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/githubuser/gol-hs#readme
+license:             BSD3
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2018 Author name here
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - containers
+
+
+library:
+  source-dirs: lib
+
+executables:
+  gol-hs:
+    source-dirs:      src
+    main:             Main.hs
+
+tests:
+  tests:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options: -Wall
+    dependencies:
+      - gol-hs
+      - hspec
+      - HUnit
